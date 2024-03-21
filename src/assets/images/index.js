@@ -1,0 +1,10 @@
+export { default as Logo } from "./logo.png";
+export { default as LogoLeft } from "./loginleft.png";
+export { default as ForgotImage } from "./forgot-image.png";
+export { default as SelectImage } from "./select-user-image.png";
+export { default as ProfilePic } from "./profile-pic.png";
+export { default as NotFoundImage } from "./not-found.svg";
+export { default as UserImage } from "./user.png";
+export { default as Logo2 } from "./logo2.png";
+export { default as SignImg } from "./sign-image.png";
+export { default as CreateUser } from "./create-user.png";
