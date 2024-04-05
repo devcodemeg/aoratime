@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const CustomersNameList = ({ handlePopup }) => {
+const CustomersNameList = () => {
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -102,23 +101,41 @@ const CustomersNameList = ({ handlePopup }) => {
             </div>
           </div> */}
         </div>
-        <div className="card">
+        <div className="card hme-crd">
         <div className="card-body">
           <div className="responsive-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-50px text-center">Customer No.</th>
-                  <th className="w-50px text-center">Kd Name</th>
-                  <th className="w-100px text-center">Status</th>
+                  <th className="w-150px text-start">
+                  Customer No.
+                    </th>
+                  <th className="w-150px text-start">
+                  Kd Name
+                    </th>
+                  <th className="w-150px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Status</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
                 </tr>
               </thead>
               <tbody className="">
 
                 <tr className="clr">
-                  <td className="text-center">1</td>
-                  <td className="text-center">Norma</td>
-                  <td className="text-center">
+                  <td className="text-start">1</td>
+                  <td className="text-start">Norma</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -142,9 +159,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">2</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">
+                  <td className="text-start">2</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -168,9 +185,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">3</td>
-                  <td className="text-center">Phone</td>
-                  <td className="text-center">
+                  <td className="text-start">3</td>
+                  <td className="text-start">Phone</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -194,9 +211,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">4</td>
-                  <td className="text-center">Edeka</td>
-                  <td className="text-center">
+                  <td className="text-start">4</td>
+                  <td className="text-start">Edeka</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -220,9 +237,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">5</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">
+                  <td className="text-start">5</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -246,9 +263,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">6</td>
-                  <td className="text-center">ECE</td>
-                  <td className="text-center">
+                  <td className="text-start">6</td>
+                  <td className="text-start">ECE</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -272,9 +289,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">7</td>
-                  <td className="text-center">BKH</td>
-                  <td className="text-center">
+                  <td className="text-start">7</td>
+                  <td className="text-start">BKH</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -298,9 +315,9 @@ const CustomersNameList = ({ handlePopup }) => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">8</td>
-                  <td className="text-center">Fibres</td>
-                  <td className="text-center">
+                  <td className="text-start">8</td>
+                  <td className="text-start">Fibres</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">

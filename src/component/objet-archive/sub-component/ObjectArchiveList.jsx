@@ -105,26 +105,138 @@ const ObjectArchiveList = () => {
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-45px text-center">Cus No.</th>
-                  <th className="w-45px text-center">Customer Name</th>
-                  <th className="w-45px text-center">Object No.</th>
-                  <th className="w-50px text-center">Object Name</th>
-                  <th className="w-45px text-center">Postal Code</th>
-                  <th className="w-50px text-center">Location</th>
-                  <th className="w-75px text-center">Street</th>
-                  <th className="w-175px text-center">Status</th>
+                  <th className="w-75px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Cus No.</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Customer Name</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Object No.</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Object Name</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Postal Code</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Location</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Street</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Status</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
                 </tr>
               </thead>
               <tbody className="">
 
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -148,36 +260,26 @@ const ObjectArchiveList = () => {
                       <div className="usrdetl-td-drpdwn">
                         <ul>
                           <li>
-                            <Link to={"/add-role"} className='usr-rcrvy'>
+                            <Link to={""} className='usr-rcrvy'>
                               <span>
-
-
-
                               <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.833496 2.33325V7.33325H5.8335" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19.1665 15.6667V10.6667H14.1665" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M17.0752 6.49998C16.6525 5.30564 15.9342 4.23782 14.9873 3.39616C14.0403 2.55451 12.8956 1.96645 11.6599 1.68686C10.4242 1.40727 9.13787 1.44527 7.92084 1.79729C6.70381 2.14932 5.59579 2.80391 4.70016 3.69998L0.833496 7.33331M19.1668 10.6666L15.3002 14.3C14.4045 15.1961 13.2965 15.8506 12.0795 16.2027C10.8625 16.5547 9.57609 16.5927 8.3404 16.3131C7.10472 16.0335 5.96 15.4455 5.01305 14.6038C4.06611 13.7621 3.3478 12.6943 2.92516 11.5" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-
-
-
                               </span>
                               Recovery
                             </Link>
                           </li>
                           <li>
-                            <Link to={"/add-role"} className='usr-dlte ' active>
+                            <Link to={""} className='usr-dlte ' active>
                               <span>
-
-
 <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.5 5H3.16667H16.5" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M14.8332 5.00008V16.6667C14.8332 17.1088 14.6576 17.5327 14.345 17.8453C14.0325 18.1578 13.6085 18.3334 13.1665 18.3334H4.83317C4.39114 18.3334 3.96722 18.1578 3.65466 17.8453C3.3421 17.5327 3.1665 17.1088 3.1665 16.6667V5.00008M5.6665 5.00008V3.33341C5.6665 2.89139 5.8421 2.46746 6.15466 2.1549C6.46722 1.84234 6.89114 1.66675 7.33317 1.66675H10.6665C11.1085 1.66675 11.5325 1.84234 11.845 2.1549C12.1576 2.46746 12.3332 2.89139 12.3332 3.33341V5.00008" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M7.3335 9.16675V14.1667" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10.6665 9.16675V14.1667" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-
-
                               </span>
                               Delete
                             </Link>
@@ -189,12 +291,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -220,12 +322,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -251,12 +353,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -282,12 +384,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -313,12 +415,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -344,12 +446,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -375,12 +477,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -406,12 +508,12 @@ const ObjectArchiveList = () => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">fibres</td>
-                  <td className="text-center">4</td>
-                  <td className="text-center">fiber 4</td>
-                  <td className="text-center">93309</td>
-                  <td className="text-center">Kelheim</td>
-                  <td className="text-center">Regesbruger Stras...</td>
+                  <td className="text-start">fibres</td>
+                  <td className="text-start">4</td>
+                  <td className="text-start">fiber 4</td>
+                  <td className="text-start">93309</td>
+                  <td className="text-start">Kelheim</td>
+                  <td className="text-start">Regesbruger Stras...</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -438,7 +540,6 @@ const ObjectArchiveList = () => {
               </tbody>
             </table>
           </div>
-
         </div>
       </div>
     </>

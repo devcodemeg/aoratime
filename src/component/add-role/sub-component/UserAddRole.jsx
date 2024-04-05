@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 const UserAddRole = () => {
     return (
         <>
-            <div className="card add-role-crd">
+            <div className="card add-role-crd hme-crd">
                 <div className="card-body">
-
                     <div className="add-main">
                         <div className='page-title'>
                             <h3>Rolle hinzufügen</h3>
@@ -36,7 +35,6 @@ const UserAddRole = () => {
                         <div className='page-title'>
                             <h3>Berechtigungen</h3>
                         </div>
-
                         <div className="main-slctr">
                         <div className="inner-flx-box">
                         <div className="chkbx-main">
@@ -97,20 +95,18 @@ const UserAddRole = () => {
                     </div>
                     <div className="btns-evnts btn-evnt">
           <div className="btns-evnts-inner">
-            <Link to="/user"
-              onClick={() => handlePopup("pop_11")}
-              className="btn secondary-btn  btn-2"
+            <Link to="/roll"
+              className="btn ahcv-btn abb-btn"
             >
              Abbrechen
             </Link>
           </div>
           <div
-            onClick={() => handlePopup("pop_22")}
             className="btns-evnts-inner"
           >
-            <a className="btn primary-btn btn-2 ">
+            <Link to="/roll" className="btn primary-btn btn-2 spe-btn">
             Speichern
-            </a>
+            </Link>
           </div>
         </div>
                 </div>

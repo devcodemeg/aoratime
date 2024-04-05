@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CreateResidentList = ({handlePopup}) => {
+const CreateResidentList = () => {
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -121,432 +121,538 @@ const CreateResidentList = ({handlePopup}) => {
           </div> */}
         </div>
       </div>
-      <div className="card">
+      <div className="card hme-crd">
         <div className="card-body">
           <div className="responsive-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-100px text-center">Vorname, Name</th>
-                  <th className="w-250px text-center">Staatsangehörigkeit</th>
-                  <th className="w-250px text-start">Einzug in Unterkunft</th>
-                  <th className="w-200px text-center">Zimmer Nummer</th>
-                  <th className="w-154px text-center">Ansprechpartner</th>
-                  <th className="w-150px text-center">Geschlecht</th>
-                  <th className="w-200px text-center">Status Asyl</th>
-                  <th className="w-200px text-start">Active</th>
+                  <th className="w-200px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Vorname, Name</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-350px text-center"><div className="main-th-hdng">
+                    <div className="main-inner-hdng">
+                      <p>Staatsangehörigkeit</p>
+                    </div>
+                    <div className="main-up-down-arow">
+                      <span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  </th>
+                  <th className="w-250px text-start"><div className="main-th-hdng">
+                    <div className="main-inner-hdng">
+                      <p>Einzug in Unterkunft</p>
+                    </div>
+                    <div className="main-up-down-arow">
+                      <span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  </th>
+                  <th className="w-250px text-center"><div className="main-th-hdng">
+                    <div className="main-inner-hdng">
+                      <p>Zimmer Nummer</p>
+                    </div>
+                    <div className="main-up-down-arow">
+                      <span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  </th>
+                  <th className="w-250px text-center"><div className="main-th-hdng">
+                    <div className="main-inner-hdng">
+                      <p>Ansprechpartner</p>
+                    </div>
+                    <div className="main-up-down-arow">
+                      <span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  </th>
+                  <th className="w-300px text-center"><div className="main-th-hdng">
+                    <div className="main-inner-hdng">
+                      <p>Geschlecht</p>
+                    </div>
+                    <div className="main-up-down-arow">
+                      <span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  </th>
+                  <th className="w-300px text-center"><div className="main-th-hdng">
+                    <div className="main-inner-hdng">
+                      <p>Status Asyl</p>
+                    </div>
+                    <div className="main-up-down-arow">
+                      <span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  </th>
+                  <th className="w-200px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Active</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody className="">
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">
+                          Lorem ipsum                            </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">Lorem ipsum</td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
 
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
-                        <div className="usrdtls-td">
-                          <div className="prd-descrp">
-                            <span className="d-block titl-view">
-                            Lorem ipsum                            </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>Lorem ipsum</p>
+                    </div>
+                  </td>
+                  <td className="text-right">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
 
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-center">
-                        <div className="dumydata-flx">
-                          <p>Lorem ipsum</p>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                      <div className="action-main">
-                          <div className="action-inner">
-                            <Link to="">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653"/>
-</svg>
-                            </Link>
-                          </div>
-                          <div className="action-inner">
-                            <div class="action-btn">
-                              <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                              </Link>
-                            </div>
-                          </div>
+                          </Link>
                         </div>
-                      </td>
-                    </tr>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
 
               </tbody>
             </table>

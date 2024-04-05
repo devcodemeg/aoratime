@@ -5,7 +5,7 @@ const CreateUser = () => {
   return (
     <>
 <div className="main-wrapper">
-       <div className="card usr-crd">
+       <div className="card usr-crd card-main">
        <Breadcrumb />
         <CreateUserProfile />
        </div>

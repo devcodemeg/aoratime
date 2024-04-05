@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CustomersArchiveList = ({ handlePopup }) => {
+const CustomersArchiveList  = () => {
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -98,32 +98,144 @@ const CustomersArchiveList = ({ handlePopup }) => {
           </div> */}
         </div>
       </div>
-      <div className="card">
+      <div className="card hme-crd">
         <div className="card-body">
           <div className="responsive-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-50px text-center">Customer No.</th>
-                  <th className="w-50px text-center">Customer Name</th>
-                  <th className="w-50px text-center">Postal Code</th>
-                  <th className="w-50px text-center">Location</th>
-                  <th className="w-50px text-center">Street</th>
-                  <th className="w-50px text-center">Phone No.</th>
-                  <th className="w-75px text-center">Email</th>
-                  <th className="w-175px text-center">Status</th>
+                  <th className="w-75px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Customer No.</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Customer Name</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Postal Code</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Location</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Street</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Phone No.</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Email</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-225px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Status</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
                 </tr>
               </thead>
               <tbody className="">
 
                 <tr className="clr">
                   <td className="text-center">1</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -147,7 +259,7 @@ const CustomersArchiveList = ({ handlePopup }) => {
                       <div className="usrdetl-td-drpdwn">
                         <ul>
                           <li>
-                            <Link to={"/add-role"} className='usr-rcrvy'>
+                            <Link to={""} className='usr-rcrvy'>
                               <span>
 
 
@@ -165,7 +277,7 @@ const CustomersArchiveList = ({ handlePopup }) => {
                             </Link>
                           </li>
                           <li>
-                            <Link to={"/add-role"} className='usr-dlte ' active>
+                            <Link to={""} className='usr-dlte ' active>
                               <span>
 
 
@@ -188,12 +300,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">2</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Norma</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Norma</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -219,12 +331,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">3</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Phone</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Phone</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -250,12 +362,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">4</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Edeka</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Edeka</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -281,12 +393,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">5</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -312,12 +424,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">6</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">ELC</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">ELC</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -343,12 +455,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">7</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">BKH</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">BKH</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -374,12 +486,12 @@ const CustomersArchiveList = ({ handlePopup }) => {
                 </tr>
                 <tr className="clr">
                   <td className="text-center">8</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Fibres</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Fibres</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">Test</td>
                   <td className="text-center">
                     <div className="usrdetls-td ">
                       <a href="">
@@ -406,7 +518,6 @@ const CustomersArchiveList = ({ handlePopup }) => {
               </tbody>
             </table>
           </div>
-
         </div>
       </div>
     </>

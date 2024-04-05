@@ -4,14 +4,14 @@ const Breadcrumb = ({ handlePopup }) => {
   return (
     <>
       <div className="home-top">
-        <div className='page-title'>
+        {/* <div className='page-title'>
             <h3>Dashboard</h3>
-        </div>
+        </div> */}
         <div className="btns-evnts">
           <div className="btns-evnts-inner">
             <a
               onClick={() => handlePopup("pop_11")}
-              className="btn primary-btn"
+              className="btn primary-btn btn-flex gste-btn"
             >
               <span>
                 <svg
@@ -34,7 +34,7 @@ const Breadcrumb = ({ handlePopup }) => {
             onClick={() => handlePopup("pop_22")}
             className="btns-evnts-inner"
           >
-            <a className="btn secondary-btn ">
+            <a className="btn secondary-btn btn-flex gste-btn">
               <span>
                 <svg
                   width="22"

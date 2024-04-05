@@ -38,8 +38,8 @@ const ForgotPassword = () => {
                       <p>No worries, we will send you reset instructions</p>
                     </div>
                     <div class="single-input">
-                      <label for="">Email ID</label>
-                      <div class="authinput-wthicon">
+                      <label for="">Email </label>
+                      <div class="authinput-wthicon authinput-email">
                       <input type="number" placeholder="example@gmail.com" />
                       <div className="auth-icon">
                         <span>

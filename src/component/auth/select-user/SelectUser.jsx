@@ -71,25 +71,6 @@ const SelectUser = () => {
                           Next
                         </Link>
                       </div>
-                      <div class="back-btn">
-                        <Link to="/login">
-                          <span className="back-icon">
-                            <svg
-                              width="12"
-                              height="12"
-                              viewBox="0 0 12 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M5.6962 12L0 6L5.6962 0L6.71084 1.05L2.7235 5.25H11.3924V6.75H2.7235L6.71084 10.95L5.6962 12Z"
-                                fill="#0388A6"
-                              />
-                            </svg>
-                          </span>
-                          <h3>Back to login</h3>
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </div>

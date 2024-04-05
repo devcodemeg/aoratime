@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const UserManagementArchive = ({handlePopup}) => {
+const UserManagementArchive  = () => {
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -87,7 +87,13 @@ const UserManagementArchive = ({handlePopup}) => {
               </label>
             </div>
           </div>
-
+          <div className="fltrsrch-mobl-icon">
+            <span className="moblsrch-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z" fill="#808184"/>
+</svg>
+            </span>
+          </div>
           {/* <div className="fltr-inner">
             <div className="monthly-fltr select-box">
               <Select
@@ -98,21 +104,147 @@ const UserManagementArchive = ({handlePopup}) => {
           </div> */}
         </div>
       </div>
-      <div className="card">
+      <div className="card hme-crd">
         <div className="card-body">
           <div className="responsive-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-100px text-center">PNR</th>
-                  <th className="w-250px text-center">Benutzer</th>
-                  <th className="w-250px text-start">E-Mail</th>
-                  <th className="w-250px text-start">Berechitung</th>
-                  <th className="w-200px text-center">Erstellet von</th>
-                  <th className="w-154px text-center">Erstellt am</th>
-                  <th className="w-150px text-center">Gelöscht von</th>
-                  <th className="w-200px text-center">Gelöscht am</th>
-                  <th className="w-200px text-start">Inaktiv</th>
+                  <th className="w-100px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>PNR</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-250px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Benutzer</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-250px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p> E-Mail</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                   </th>
+                  <th className="w-250px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Berechitung</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-200px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Erstellet von</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-154px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Erstellt am</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-150px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Gelöscht von</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-200px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Gelöscht am</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-200px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Inaktiv</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
                 </tr>
               </thead>
               <tbody className="">

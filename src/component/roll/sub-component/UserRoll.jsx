@@ -72,19 +72,60 @@ const UserRoll = () => {
           </div> */}
         </div>
       </div>
-      <div className="card">
+      <div className="card hme-crd">
         <div className="card-body">
           <div className="responsive-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-250px text-start">Title</th>
-                  <th className="w-200px text-start">Abkürzung</th>
-                  <th className="w-200px text-center">Status</th>
+                  <th className="w-250px text-start">
+                     <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Title</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-200px text-start">
+                     <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Abkürzung</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-200px text-center">
+                     <div className="main-th-hdng main-th-new ">
+                      <div className="main-inner-hdng">
+                        <p>Status</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
                 </tr>
               </thead>
               <tbody className="">
-
                 <tr className="clr">
                   <td className="text-start">Administrator</td>
                   <td className="text-start">Administrator</td>
@@ -92,14 +133,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -109,9 +146,7 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
-
                       </a>
                       <div className="usrdetls-td-star">
                         <span>
@@ -125,7 +160,6 @@ const UserRoll = () => {
                           <li>
                             <Link to={"/add-role"} className='usr-edt'>
                               <span>
-
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <g clip-path="url(#clip0_1_7505)">
                                     <path d="M9.16602 3.33325H3.33268C2.89065 3.33325 2.46673 3.50885 2.15417 3.82141C1.84161 4.13397 1.66602 4.55789 1.66602 4.99992V16.6666C1.66602 17.1086 1.84161 17.5325 2.15417 17.8451C2.46673 18.1577 2.89065 18.3333 3.33268 18.3333H14.9993C15.4414 18.3333 15.8653 18.1577 16.1779 17.8451C16.4904 17.5325 16.666 17.1086 16.666 16.6666V10.8333" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -137,7 +171,6 @@ const UserRoll = () => {
                                     </clipPath>
                                   </defs>
                                 </svg>
-
                               </span>
                               Editieren
                             </Link>
@@ -145,11 +178,9 @@ const UserRoll = () => {
                           <li>
                             <Link to={"/add-role"} className='usr-sdtrt ' active>
                               <span>
-
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
                               </span>
                               Standard
                             </Link>
@@ -157,12 +188,9 @@ const UserRoll = () => {
                           <li>
                             <Link to={"/add-role"} className='usr-actv' >
                               <span>
-
-
                                 <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
                                 </svg>
-
                               </span>
                               Aktiv
                             </Link>
@@ -170,7 +198,6 @@ const UserRoll = () => {
                         </ul>
                       </div>
                     </div>
-
                   </td>
                 </tr>
                 <tr className="clr">
@@ -180,14 +207,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -197,12 +220,9 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
-
                     </div>
-
                   </td>
                 </tr>
                 <tr className="clr">
@@ -212,14 +232,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -229,7 +245,6 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
@@ -242,14 +257,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -259,7 +270,6 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
@@ -272,14 +282,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -289,7 +295,6 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
@@ -302,14 +307,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -319,7 +320,6 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
@@ -332,14 +332,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -349,7 +345,6 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
@@ -362,14 +357,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -379,7 +370,6 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
@@ -392,14 +382,10 @@ const UserRoll = () => {
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpts">
-
                           <span className="d-block titl-view">
-
-
                             <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
                             </svg>
-
                           </span>
                           <p>Inaktiv</p>
                         </div>
@@ -409,11 +395,9 @@ const UserRoll = () => {
                               <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </span>
-
                         </div>
                       </a>
                     </div>
-
                   </td>
                 </tr>
               </tbody>

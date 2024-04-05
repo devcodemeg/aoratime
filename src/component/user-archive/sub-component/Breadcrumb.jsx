@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Breadcrumb = () => {
   return (
     <>
-       <div className="home-top">
+       <div className="home-top usrmngemnt-top">
         <div className='page-title'>
             <h3>Benutzer Archive</h3>
         </div>
@@ -35,7 +35,7 @@ const Breadcrumb = () => {
           <div
             className="btns-evnts-inner"
           >
-            <a className="btn  ">
+            <a className="btn pdf-btn ">
             <span>
 
 <svg width="28" height="35" viewBox="0 0 28 35" fill="none" xmlns="http://www.w3.org/2000/svg">

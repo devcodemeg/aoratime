@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const CreateResidentArchiveList = ({handlePopup}) => {
+
+const CreateResidentArchiveList  = () => {
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -121,27 +121,138 @@ const CreateResidentArchiveList = ({handlePopup}) => {
           </div> */}
         </div>
       </div>
-      <div className="card">
+      <div className="card hme-crd">
         <div className="card-body">
           <div className="responsive-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-100px text-center">Vorname, Name</th>
-                  <th className="w-250px text-center">Staatsangehörigkeit</th>
-                  <th className="w-250px text-start">Einzug in Unterkunft</th>
-                  <th className="w-200px text-center">Zimmer Nummer</th>
-                  <th className="w-154px text-center">Created by</th>
-                  <th className="w-150px text-center">Created on</th>
-                  <th className="w-200px text-center">Deleted by</th>
-                  <th className="w-200px text-center">Status</th>
+                  <th className="w-200px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p> Vorname, Name</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                   </th>
+                  <th className="w-350px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Staatsangehörigkeit</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-250px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Einzug in Unterkunft</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-250px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Zimmer Nummer</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-250px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Created by</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-300px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Created on</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-300px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Deleted by</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
+                  <th className="w-200px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Status</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    </th>
                 </tr>
               </thead>
               <tbody className="">
-
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -149,20 +260,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -191,8 +301,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -200,20 +310,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -242,8 +351,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -251,20 +360,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -293,8 +401,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -302,20 +410,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -344,8 +451,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -353,20 +460,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -395,8 +501,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -404,20 +510,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -446,8 +551,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -455,20 +560,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -497,8 +601,8 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                       </td>
                     </tr>
                     <tr  className="clr">
-                      <td className="text-center">Alexander Goebel</td>
-                      <td className="text-center">
+                      <td className="text-start">Alexander Goebel</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -506,20 +610,19 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">Lorem ipsum</td>
-                      <td className="text-center">
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">Lorem ipsum</td>
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>SuperAdmin</p>
                         </div>
                       </td>
-
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>27.07.2024 - 13:32</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>app users</p>
                         </div>
@@ -547,7 +650,6 @@ const CreateResidentArchiveList = ({handlePopup}) => {
                     </div>
                       </td>
                     </tr>
-
               </tbody>
             </table>
           </div>

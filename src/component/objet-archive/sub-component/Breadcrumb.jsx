@@ -6,11 +6,11 @@ const Breadcrumb = ({ handlePopup }) => {
     <>
       <div className="home-top">
         <div className='page-title'>
-          <h3>Customer achieve</h3>
+          <h3>Object Archive</h3>
         </div>
         <div className="btns-evnts">
           <div className="btns-evnts-inner">
-            <Link to=""
+            <Link to="/customers"
               onClick={() => handlePopup("pop_66")}
               className="btn secondary-btn btn-2"
             >
@@ -20,7 +20,7 @@ const Breadcrumb = ({ handlePopup }) => {
           <div
             className="btns-evnts-inner"
           >
-            <Link to="" className="btn ahcv-btn ">
+            <Link to="" className="btn ahcv-btn btn-flex">
 
               Achieve
               <span className="svg-icon">
@@ -32,7 +32,7 @@ const Breadcrumb = ({ handlePopup }) => {
             <div className="ahcv-btn-drpdwn">
               <ul>
                 <li>
-                  <Link to={"/add-role"} className='cstmr' active>
+                  <Link to={"/customer-archive"} className='cstmr' active>
                     <span>
                       <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.6654 16.5V14.8333C14.6654 13.9493 14.3142 13.1014 13.6891 12.4763C13.0639 11.8512 12.2161 11.5 11.332 11.5H4.66536C3.78131 11.5 2.93346 11.8512 2.30834 12.4763C1.68322 13.1014 1.33203 13.9493 1.33203 14.8333V16.5" stroke="#FBFBFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -43,7 +43,7 @@ const Breadcrumb = ({ handlePopup }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/add-role"} className='usr-obj ' active>
+                  <Link to={"/customer-object-archive-main"} className='usr-obj ' active>
                     <span>
                       <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.33203 12.5001C1.33203 12.5001 2.16536 11.6667 4.66536 11.6667C7.16536 11.6667 8.83203 13.3334 11.332 13.3334C13.832 13.3334 14.6654 12.5001 14.6654 12.5001V2.50008C14.6654 2.50008 13.832 3.33341 11.332 3.33341C8.83203 3.33341 7.16536 1.66675 4.66536 1.66675C2.16536 1.66675 1.33203 2.50008 1.33203 2.50008V12.5001Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

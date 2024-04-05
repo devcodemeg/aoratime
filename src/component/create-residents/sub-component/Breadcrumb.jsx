@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ handlePopup }) => {
+const Breadcrumb  = () => {
   return (
     <>
       <div className="home-top">
@@ -10,32 +10,32 @@ const Breadcrumb = ({ handlePopup }) => {
         </div>
         <div className="btns-evnts">
           <div className="btns-evnts-inner">
-            <Link to=""
+            <Link to="/create-user"
               onClick={() => handlePopup("pop_11")}
               className="btn secondary-btn btn-2"
             >
-              Benutzer erstellen
+              Bewohner erstellen
             </Link>
           </div>
           <div
             onClick={() => handlePopup("pop_22")}
             className="btns-evnts-inner"
           >
-            <Link to="/create-residents-archive" className="btn secondary-btn btn-2 ">
-            Benutzer archivieren
+            <Link to="" className="btn secondary-btn btn-2 ">
+            Bewohner archivieren
             </Link>
           </div>
           <div
             className="btns-evnts-inner"
           >
-            <Link to="/user-archive" className="btn ahcv-btn ">
+            <Link to="/create-residents-archive" className="btn ahcv-btn ">
             Archiv Ansicht
             </Link>
           </div>
           <div
             className="btns-evnts-inner"
           >
-            <a className="btn  ">
+            <a className="btn pdf-btn ">
             <span>
 
 <svg width="28" height="35" viewBox="0 0 28 35" fill="none" xmlns="http://www.w3.org/2000/svg">

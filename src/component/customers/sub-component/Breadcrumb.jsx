@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import PopUpAddObject from "./customer-popup/PopUpAddObject";
+import PopUpAddCustomer from "./customer-popup/PopUpAddCustomer";
 
-const Breadcrumb = ({ handlePopup }) => {
+const Breadcrumb = () => {
+
+  const [showPopUpAddCustomer, setPopUpAddCustomer] = useState(false);
+  const handlePopUpAddCustomer = () => {
+    setPopUpAddCustomer((p) => !p);
+  };
+
+  const [showPopUpAddObject, setPopUpAddObject] = useState(false);
+  const handlePopUpAddObject = () => {
+    setPopUpAddObject((p) => !p);
+  };
   return (
     <>
       <div className="home-top">
@@ -10,9 +22,9 @@ const Breadcrumb = ({ handlePopup }) => {
         </div>
         <div className="btns-evnts">
           <div className="btns-evnts-inner">
-            <Link to="/popup-add-customer"
-              onClick={() => handlePopup("pop_66")}
-              className="btn secondary-btn btn-2"
+            <button
+             onClick={handlePopUpAddCustomer}
+              className="btn secondary-btn btn-2 btn-flex"
             >
               <span>
 
@@ -23,13 +35,12 @@ const Breadcrumb = ({ handlePopup }) => {
 
               </span>
               Add customer
-            </Link>
+            </button>
           </div>
           <div
-          onClick={() => handlePopup("pop_77")}
             className="btns-evnts-inner"
           >
-            <Link to="/popup-add-object" className="btn ahcv-btn ">
+            <button className="btn ahcv-btn btn-flex "  onClick={handlePopUpAddObject}>
               <span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 5V19" stroke="#E54949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -37,13 +48,12 @@ const Breadcrumb = ({ handlePopup }) => {
                 </svg>
               </span>
               Add object
-            </Link>
+            </button>
           </div>
           <div
             className="btns-evnts-inner"
           >
-            <Link to="" className="btn ahcv-btn ">
-
+            <Link to="/customer-archive" className="btn ahcv-btn btn-flex">
               Achieve
               <span className="svg-icon">
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +64,10 @@ const Breadcrumb = ({ handlePopup }) => {
           </div>
         </div>
       </div>
+
+
+      {showPopUpAddObject && <PopUpAddObject handlePopup={handlePopUpAddObject}/>}
+      {showPopUpAddCustomer && <PopUpAddCustomer handlePopup={handlePopUpAddCustomer}/>}
     </>
   );
 };

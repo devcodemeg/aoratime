@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ handlePopup }) => {
+const Breadcrumb  = () => {
   return (
     <>
       <div className="home-top">
@@ -12,7 +12,7 @@ const Breadcrumb = ({ handlePopup }) => {
           <div className="btns-evnts-inner">
             <Link to="/add-role"
 
-              className="btn secondary-btn btn-2"
+              className="btn secondary-btn btn-2 btn-flex"
             >
               <span>
 

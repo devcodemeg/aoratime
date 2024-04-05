@@ -1,5 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 const ResidentAbsentTable = ({ handlePopup }) => {
+
+  const [seletedTwo, setSelectedTwo] = useState(null);
+
+  const clickOnItemTwo = (index) => {
+    if (index === seletedTwo) {
+      setSelectedTwo(null);
+    } else {
+      setSelectedTwo(index);
+    }
+  };
+
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -108,30 +119,126 @@ const ResidentAbsentTable = ({ handlePopup }) => {
               </label>
             </div>
           </div>
-
-          {/* <div className="fltr-inner">
-            <div className="monthly-fltr select-box">
-              <Select
-                options={optionsMonthlyType}
-                placeholder={<div>Status</div>}
-              />
-            </div>
-          </div> */}
+          <div className="fltrsrch-mobl-icon">
+            <span className="moblsrch-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z" fill="#808184"/>
+</svg>
+            </span>
+          </div>
         </div>
       </div>
       <div className="card">
         <div className="card-body">
-          <div className="responsive-table">
+          <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-250px text-start">Name</th>
-                  <th className="w-250px text-center">Abwesenheit von</th>
-                  <th className="w-250px text-center">Abwesenheit bis</th>
-                  <th className="w-100px text-center">Bewohner abgemeldet</th>
-                  <th className="w-150px text-center">Ausgecheckt</th>
-                  <th className="w-150px text-center">Eingecheckt</th>
-                  <th className="w-250px text-start">Kommentar</th>
+                  <th className="w-250px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Name</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-250px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Abwesenheit von</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-250px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Abwesenheit bis</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-100px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Bewohner abgemeldet</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-150px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Ausgecheckt</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-150px text-center">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Eingecheckt</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th className="w-250px text-start">
+                    <div className="main-th-hdng">
+                      <div className="main-inner-hdng">
+                        <p>Kommentar</p>
+                      </div>
+                      <div className="main-up-down-arow">
+                        <span>
+                          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </th>
                   <th className="w-100px text-center"></th>
                 </tr>
               </thead>
@@ -206,8 +313,12 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                                 fill="#0388A6"
                               />
                             </svg>
+                            <div class="tooltip">
+                              <span class="tooltiptext">07.02.2024 - 12:14</span>
+                            </div>
                           </span>
                         </div>
+
                       </td>
                       <td className="text-start">
                         <div className="dumydata-flx">
@@ -251,7 +362,160 @@ const ResidentAbsentTable = ({ handlePopup }) => {
               </tbody>
             </table>
           </div>
-          <div className="total-enter">
+
+          {/* start mobile table view */}
+            <div className="mobiltable-main">
+             <div className="mobile-table-head">
+              <ul>
+                <li>
+                  <h5>Name 
+                  <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                  </h5>
+                </li>
+                <li>
+                  <h5>Abwesenheit von
+                  <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                  </h5>
+                </li>
+              </ul>
+             </div>
+             <div className="mobile-table-body">
+             <ul>
+                {Array(6)
+                  .fill("")
+                  .map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        <div className="mobile-td">
+                          <div
+                            className="mobile-data-top"
+                            onClick={() => clickOnItemTwo(idx)}
+                          >
+                            <div className="mobile-datatp-inner">
+                              <p>Nguyen, Shane</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Mo 07.02.2024 16:00</p>
+                            </div>
+                          </div>
+                          {seletedTwo === idx && (
+                            <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                  Bewohner abgemeldet:
+                                </p>
+                                <p>Montag 07.02.2024 16:00</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">Ausgecheckt:</p>
+                                <p>
+                                  Martin Stein
+                                  <span className="notation-symbl">
+                                    <svg
+                                      width="14"
+                                      height="14"
+                                      viewBox="0 0 14 14"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M7.4375 6.4165C7.4375 6.17489 7.24162 5.979 7 5.979C6.75838 5.979 6.5625 6.17489 6.5625 6.4165V9.9165C6.5625 10.1581 6.75838 10.354 7 10.354C7.24162 10.354 7.4375 10.1581 7.4375 9.9165V6.4165Z"
+                                        fill="#0388A6"
+                                      />
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M6.99996 0.729004C3.53667 0.729004 0.729126 3.53655 0.729126 6.99984C0.729126 10.4631 3.53667 13.2707 6.99996 13.2707C10.4633 13.2707 13.2708 10.4631 13.2708 6.99984C13.2708 3.53655 10.4633 0.729004 6.99996 0.729004ZM1.60413 6.99984C1.60413 4.0198 4.01993 1.604 6.99996 1.604C9.97998 1.604 12.3958 4.0198 12.3958 6.99984C12.3958 9.97985 9.97998 12.3957 6.99996 12.3957C4.01993 12.3957 1.60413 9.97985 1.60413 6.99984Z"
+                                        fill="#0388A6"
+                                      />
+                                      <path
+                                        d="M7.58329 4.66634C7.58329 4.9885 7.32213 5.24967 6.99996 5.24967C6.67778 5.24967 6.41663 4.9885 6.41663 4.66634C6.41663 4.34418 6.67778 4.08301 6.99996 4.08301C7.32213 4.08301 7.58329 4.34418 7.58329 4.66634Z"
+                                        fill="#0388A6"
+                                      />
+                                    </svg>
+                                  </span>
+                                </p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">Eingecheckt:</p>
+                                <p>
+                                  Georg Rubin
+                                  <span className="notation-symbl">
+                                    <svg
+                                      width="14"
+                                      height="14"
+                                      viewBox="0 0 14 14"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M7.4375 6.4165C7.4375 6.17489 7.24162 5.979 7 5.979C6.75838 5.979 6.5625 6.17489 6.5625 6.4165V9.9165C6.5625 10.1581 6.75838 10.354 7 10.354C7.24162 10.354 7.4375 10.1581 7.4375 9.9165V6.4165Z"
+                                        fill="#0388A6"
+                                      />
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M6.99996 0.729004C3.53667 0.729004 0.729126 3.53655 0.729126 6.99984C0.729126 10.4631 3.53667 13.2707 6.99996 13.2707C10.4633 13.2707 13.2708 10.4631 13.2708 6.99984C13.2708 3.53655 10.4633 0.729004 6.99996 0.729004ZM1.60413 6.99984C1.60413 4.0198 4.01993 1.604 6.99996 1.604C9.97998 1.604 12.3958 4.0198 12.3958 6.99984C12.3958 9.97985 9.97998 12.3957 6.99996 12.3957C4.01993 12.3957 1.60413 9.97985 1.60413 6.99984Z"
+                                        fill="#0388A6"
+                                      />
+                                      <path
+                                        d="M7.58329 4.66634C7.58329 4.9885 7.32213 5.24967 6.99996 5.24967C6.67778 5.24967 6.41663 4.9885 6.41663 4.66634C6.41663 4.34418 6.67778 4.08301 6.99996 4.08301C7.32213 4.08301 7.58329 4.34418 7.58329 4.66634Z"
+                                        fill="#0388A6"
+                                      />
+                                    </svg>
+                                  </span>
+                                </p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">Kommentar:</p>
+                                <p>
+                                  Lorem Ipsum a dummy text for the industry
+                                  <span className="notation-symbl">
+                                    <svg
+                                      width="14"
+                                      height="14"
+                                      viewBox="0 0 14 14"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M7.4375 6.4165C7.4375 6.17489 7.24162 5.979 7 5.979C6.75838 5.979 6.5625 6.17489 6.5625 6.4165V9.9165C6.5625 10.1581 6.75838 10.354 7 10.354C7.24162 10.354 7.4375 10.1581 7.4375 9.9165V6.4165Z"
+                                        fill="#0388A6"
+                                      />
+                                      <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M6.99996 0.729004C3.53667 0.729004 0.729126 3.53655 0.729126 6.99984C0.729126 10.4631 3.53667 13.2707 6.99996 13.2707C10.4633 13.2707 13.2708 10.4631 13.2708 6.99984C13.2708 3.53655 10.4633 0.729004 6.99996 0.729004ZM1.60413 6.99984C1.60413 4.0198 4.01993 1.604 6.99996 1.604C9.97998 1.604 12.3958 4.0198 12.3958 6.99984C12.3958 9.97985 9.97998 12.3957 6.99996 12.3957C4.01993 12.3957 1.60413 9.97985 1.60413 6.99984Z"
+                                        fill="#0388A6"
+                                      />
+                                      <path
+                                        d="M7.58329 4.66634C7.58329 4.9885 7.32213 5.24967 6.99996 5.24967C6.67778 5.24967 6.41663 4.9885 6.41663 4.66634C6.41663 4.34418 6.67778 4.08301 6.99996 4.08301C7.32213 4.08301 7.58329 4.34418 7.58329 4.66634Z"
+                                        fill="#0388A6"
+                                      />
+                                    </svg>
+                                  </span>
+                                </p>
+                              </div>
+                              <div className="mobile-databtm-btn">
+                                <button className="btn primary-btn"  onClick={() => handlePopup("pop_33")}>
+                                  Einchecken
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+
+
+              </div>
+            </div>
+          {/* end mobile table view */}
+
+
+          <div className="total-enter bigscrn-ttlentry">
             <p>Gesamt 200 Einträge  </p>
           </div>
         </div>
