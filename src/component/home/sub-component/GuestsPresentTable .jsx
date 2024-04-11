@@ -137,13 +137,13 @@ const GuestsPresentTable = ({ handlePopup }) => {
           </div>
         </div>
       </div>
-      <div className="card ">
+      <div className="card home-table">
         <div className="card-body">
           <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-100px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Datum</p>
@@ -176,7 +176,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-250px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Firmenname</p>
@@ -242,7 +242,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-100px text-center">
+                  <th className="w-250px text-center">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Uhrzeit von</p>
@@ -275,7 +275,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-100px text-center">
+                  <th className="w-225px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Uhrzeit von</p>
@@ -308,7 +308,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-150px text-center">
+                  <th className="w-225px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Eingecheckt</p>
@@ -341,7 +341,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-150px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Ausgecheckt</p>
@@ -407,7 +407,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-100px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Unterschrift</p>
@@ -440,16 +440,16 @@ const GuestsPresentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-100px text-center"></th>
+                  <th className="w-325px text-start"></th>
                 </tr>
               </thead>
               <tbody className="">
                 {hotelData.map((item, idx) => {
                   return (
                     <tr key={item.orderId} className="">
-                      <td className="text-center">07.02.2024</td>
-                      <td className="text-center">XYZ company</td>
-                      <td className="text-center">
+                      <td className="text-start">07.02.2024</td>
+                      <td className="text-start">XYZ company</td>
+                      <td className="text-start">
                         <div className="usrdtls-td">
                           <div className="prd-descrp">
                             <span className="d-block titl-view">
@@ -464,7 +464,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                           <p>16:00</p>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>Martin Stein</p>
                           <span className="tblnoti-icon">
@@ -493,7 +493,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                           </span>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>Georg Rubin</p>
                           <span className="tblnoti-icon">
@@ -522,7 +522,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                           </span>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>Lorem Ipsum a du my text for the industry</p>
                           <span className="tblnoti-icon">
@@ -551,7 +551,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
                           </span>
                         </div>
                       </td>
-                      <td class="text-center">
+                      <td class="text-start">
                         <div class="dumydata-flx">
                           <p>Jq</p>
                           <span class="tblnoti-icon">
@@ -626,7 +626,7 @@ const GuestsPresentTable = ({ handlePopup }) => {
           </div>
 
           {/* start mobile table view */}
-          <div className="mobiltable-main">
+          <div className="mobiltable-main mobllrgtbl-main">
             <div className="mobile-table-head">
               <ul>
                 <li>
@@ -687,6 +687,35 @@ const GuestsPresentTable = ({ handlePopup }) => {
                     </span>
                   </h5>
                 </li>
+                <li>
+                  <h5>
+                  Name
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
               </ul>
             </div>
             <div className="mobile-table-body">
@@ -706,6 +735,9 @@ const GuestsPresentTable = ({ handlePopup }) => {
                             </div>
                             <div className="mobile-datatp-inner">
                               <p>XYZ company</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Nguyen, Shane</p>
                             </div>
                           </div>
                           {seletedOne === idx && (

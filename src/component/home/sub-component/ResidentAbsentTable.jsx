@@ -121,14 +121,14 @@ const ResidentAbsentTable = ({ handlePopup }) => {
           </div>
           <div className="fltrsrch-mobl-icon">
             <span className="moblsrch-icon">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z" fill="#808184"/>
-</svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z" fill="#808184" />
+              </svg>
             </span>
           </div>
         </div>
       </div>
-      <div className="card">
+      <div className="card home-table">
         <div className="card-body">
           <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
@@ -149,7 +149,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-250px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Abwesenheit von</p>
@@ -164,7 +164,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-250px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Abwesenheit bis</p>
@@ -179,7 +179,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-100px text-center">
+                  <th className="w-225px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Bewohner abgemeldet</p>
@@ -194,7 +194,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-150px text-center">
+                  <th className="w-150px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Ausgecheckt</p>
@@ -209,7 +209,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-150px text-center">
+                  <th className="w-150px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Eingecheckt</p>
@@ -239,7 +239,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-100px text-center"></th>
+                  <th className="w-250px text-start"></th>
                 </tr>
               </thead>
               <tbody className="">
@@ -255,10 +255,10 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center">Montag 07.02.2024 12:14</td>
-                      <td className="text-center">Montag 07.02.2024 12:14</td>
+                      <td className="text-start">Montag 07.02.2024 12:14</td>
+                      <td className="text-start">Montag 07.02.2024 12:14</td>
                       <td className="text-center">Ja/Nein</td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>Martin Stein</p>
                           <span className="tblnoti-icon">
@@ -287,7 +287,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                           </span>
                         </div>
                       </td>
-                      <td className="text-center">
+                      <td className="text-start">
                         <div className="dumydata-flx">
                           <p>Georg Rubin</p>
                           <span className="tblnoti-icon">
@@ -364,23 +364,28 @@ const ResidentAbsentTable = ({ handlePopup }) => {
           </div>
 
           {/* start mobile table view */}
-            <div className="mobiltable-main">
-             <div className="mobile-table-head">
+          <div className="mobiltable-main mobllrgtbl-main">
+            <div className="mobile-table-head">
               <ul>
                 <li>
-                  <h5>Name 
-                  <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                  <h5>Name
+                    <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
                   </h5>
                 </li>
                 <li>
                   <h5>Abwesenheit von
-                  <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                    <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                  </h5>
+                </li>
+                <li>
+                  <h5>Abwesenheit bis
+                    <span><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 1L1 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 8L4 11L7 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
                   </h5>
                 </li>
               </ul>
-             </div>
-             <div className="mobile-table-body">
-             <ul>
+            </div>
+            <div className="mobile-table-body">
+              <ul>
                 {Array(6)
                   .fill("")
                   .map((item, idx) => {
@@ -397,9 +402,18 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                             <div className="mobile-datatp-inner">
                               <p>Mo 07.02.2024 16:00</p>
                             </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Mo 07.02.2024 16:00</p>
+                            </div>
                           </div>
                           {seletedTwo === idx && (
                             <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                  Abwesenheit bis:
+                                </p>
+                                <p>Mo 07.02.2024 16:00</p>
+                              </div>
                               <div className="mobile-databtm-dtl">
                                 <p className="para-bold">
                                   Bewohner abgemeldet:
@@ -497,7 +511,7 @@ const ResidentAbsentTable = ({ handlePopup }) => {
                                 </p>
                               </div>
                               <div className="mobile-databtm-btn">
-                                <button className="btn primary-btn"  onClick={() => handlePopup("pop_33")}>
+                                <button className="btn primary-btn" onClick={() => handlePopup("pop_33")}>
                                   Einchecken
                                 </button>
                               </div>
@@ -510,8 +524,8 @@ const ResidentAbsentTable = ({ handlePopup }) => {
               </ul>
 
 
-              </div>
             </div>
+          </div>
           {/* end mobile table view */}
 
 

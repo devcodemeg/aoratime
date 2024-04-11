@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 const CreateResidentArchiveList  = () => {
+  const [seletedTwo, setSelectedTwo] = useState(null);
+  const clickOnItemTwo = (index) => {
+    if (index === seletedTwo) {
+      setSelectedTwo(null);
+    } else {
+      setSelectedTwo(index);
+    }
+  };
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -110,7 +118,22 @@ const CreateResidentArchiveList  = () => {
               </label>
             </div>
           </div>
-
+          <div className="fltrsrch-mobl-icon">
+            <span className="moblsrch-icon">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z"
+                  fill="#808184"
+                />
+              </svg>
+            </span>
+          </div>
           {/* <div className="fltr-inner">
             <div className="monthly-fltr select-box">
               <Select
@@ -123,7 +146,7 @@ const CreateResidentArchiveList  = () => {
       </div>
       <div className="card hme-crd">
         <div className="card-body">
-          <div className="responsive-table">
+          <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
@@ -653,6 +676,156 @@ const CreateResidentArchiveList  = () => {
               </tbody>
             </table>
           </div>
+            {/* start mobile table view */}
+            <div className="mobiltable-main">
+            <div className="mobile-table-head">
+              <ul>
+                <li>
+                  <h5>
+                  Vorname, Name
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
+                <li>
+                  <h5>
+                  Staatsangehörigkeit
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-table-body">
+              <ul>
+                {Array(6)
+                  .fill("")
+                  .map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        <div className="mobile-td">
+                          <div
+                            className="mobile-data-top"
+                            onClick={() => clickOnItemTwo(idx)}
+                          >
+                            <div className="mobile-datatp-inner">
+                              <p>Alexander Goebel</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Lorem ipsum</p>
+                            </div>
+                          </div>
+                          {seletedTwo === idx && (
+                            <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                Einzug in Unterkunft:
+                                </p>
+                                <p>Lorem ipsum</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                Zimmer Nummer:
+                                </p>
+                                <p>Lorem ipsum</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                Ansprechpartner:
+                                </p>
+                                <p>Lorem ipsum</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                Geschlecht:
+                                </p>
+                                <p>Lorem ipsum</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                Status Asyl:
+                                </p>
+                                <p></p>
+                              </div>
+                              <div className="mobile-databtm-dtl mobile-databtm-aligncntr">
+                                <p className="para-bold">
+                                Status::
+                                </p>
+                                <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+          </div>
+          {/* end mobile table view */}
         </div>
       </div>
     </>

@@ -104,7 +104,7 @@ const PopUpResidents = ({ handlePopup }) => {
                       <div class="radio-btn">
                         <div class="rdobx-main">
                           <label>
-                            <input type="radio" name="bewohner" />
+                            <input type="radio" name="bewohner" checked/>
                             <span>
                               <em></em>Ja
                             </span>

@@ -10,7 +10,7 @@ const Breadcrumb = () => {
     }, [showDropDown])
     return (
         <>
-            <div className="home-top">
+            <div className="home-top usrmngemnt-top">
                 <div className='page-title'>
                     <h3>Reporting</h3>
                 </div>
@@ -88,17 +88,17 @@ const Breadcrumb = () => {
                                                 <ul>
                                                     <li>
                                                         <div className="chkbx-main " active>
-                                                            <label><input type="checkbox" name="" /><span><em></em>Lorem ipsum</span></label>
+                                                            <label><input type="checkbox" name="" checked/><span><em></em>Lorem ipsum</span></label>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div className="chkbx-main" active>
-                                                            <label><input type="checkbox" name="" /><span><em></em>Lorem ipsum</span></label>
+                                                            <label><input type="checkbox" name="" checked/><span><em></em>Lorem ipsum</span></label>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div className="chkbx-main" active>
-                                                            <label><input type="checkbox" name="" /><span><em></em>Lorem ipsum</span></label>
+                                                            <label><input type="checkbox" name="" checked/><span><em></em>Lorem ipsum</span></label>
                                                         </div>
                                                     </li>
                                                     <li>

@@ -240,9 +240,7 @@ const CreateUserProfile = () => {
           to="/create-residents"
           type="button"
           className="btn primary-btn save-btn"
-        >
-          Save
-        </Link>
+        >Save</Link>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const UserManagementData  = () => {
@@ -29,12 +29,22 @@ const UserManagementData  = () => {
       status: "active",
     },
   ];
+
+  const [seletedOne, setSelectedOne] = useState(null);
+
+  const clickOnItemOne = (index) => {
+    if (index === seletedOne) {
+      setSelectedOne(null);
+    } else {
+      setSelectedOne(index);
+    }
+  };
   return (
     <>
       <div className="card-filtr fltr">
         <div className="fltr-inner">
           <div className="filter-nam">
-            <p>Kunde</p>
+            <input type="text" placeholder="Kunde" />
           </div>
         </div>
         <div className="fltr-inner">
@@ -110,17 +120,17 @@ const UserManagementData  = () => {
       </div>
       <div className="card hme-crd">
         <div className="card-body">
-          <div className="responsive-table">
+          <div className="responsive-table  big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-150px text-center">
+                  <th className="w-250px text-start">
                   Kundennumer
                     </th>
-                  <th className="w-300px text-center">
+                  <th className="w-350px text-start">
                   Kundenname
                     </th>
-                  <th className="w-150px text-center">
+                  <th className="w-125px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Status</p>
@@ -140,9 +150,86 @@ const UserManagementData  = () => {
               <tbody className="">
 
                 <tr className="clr">
-                  <td className="text-center">1</td>
-                  <td className="text-center">Norma</td>
-                  <td className="text-center">
+                  <td className="text-start">1</td>
+                  <td className="text-start">Norma</td>
+                  <td className="text-start">
+                    <div className="usrdetls-td ">
+                      <a>
+                        <div className="prd-descrp prd-descrpt">
+                          <span className="d-block titl-view">
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                            </svg>
+                          </span>
+                          <p>Aktiv</p>
+                        </div>
+                        <div className="drpdwn">
+                          <span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">2</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">
+                    <div className="usrdetls-td ">
+                      <a >
+                        <div className="prd-descrp prd-descrpt">
+                          <span className="d-block titl-view">
+
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                            </svg>
+                          </span>
+                          <p>Aktiv</p>
+                        </div>
+                        <div className="drpdwn">
+                          <span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">3</td>
+                  <td className="text-start">Phone</td>
+                  <td className="text-start">
+                    <div className="usrdetls-td ">
+                      <a>
+                        <div className="prd-descrp prd-descrpt">
+                          <span className="d-block titl-view">
+
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                            </svg>
+                          </span>
+                          <p>Aktiv</p>
+                        </div>
+                        <div className="drpdwn">
+                          <span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">4</td>
+                  <td className="text-start">Edeka</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -166,9 +253,9 @@ const UserManagementData  = () => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">2</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">
+                  <td className="text-start">5</td>
+                  <td className="text-start">Test</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -192,9 +279,9 @@ const UserManagementData  = () => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">3</td>
-                  <td className="text-center">Phone</td>
-                  <td className="text-center">
+                  <td className="text-start">6</td>
+                  <td className="text-start">ECE</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -218,9 +305,9 @@ const UserManagementData  = () => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">4</td>
-                  <td className="text-center">Edeka</td>
-                  <td className="text-center">
+                  <td className="text-start">7</td>
+                  <td className="text-start">BKH</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -244,87 +331,9 @@ const UserManagementData  = () => {
                   </td>
                 </tr>
                 <tr className="clr">
-                  <td className="text-center">5</td>
-                  <td className="text-center">Test</td>
-                  <td className="text-center">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpt">
-                          <span className="d-block titl-view">
-
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
-                            </svg>
-                          </span>
-                          <p>Aktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">6</td>
-                  <td className="text-center">ECE</td>
-                  <td className="text-center">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpt">
-                          <span className="d-block titl-view">
-
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
-                            </svg>
-                          </span>
-                          <p>Aktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">7</td>
-                  <td className="text-center">BKH</td>
-                  <td className="text-center">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpt">
-                          <span className="d-block titl-view">
-
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
-                            </svg>
-                          </span>
-                          <p>Aktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">8</td>
-                  <td className="text-center">Fibres</td>
-                  <td className="text-center">
+                  <td className="text-start">8</td>
+                  <td className="text-start">Fibres</td>
+                  <td className="text-start">
                     <div className="usrdetls-td ">
                       <a href="">
                         <div className="prd-descrp prd-descrpt">
@@ -350,6 +359,63 @@ const UserManagementData  = () => {
               </tbody>
             </table>
           </div>
+
+
+   {/* start mobile table view */}
+   <div className="mobiltable-main">
+            <div className="mobile-table-head">
+              <ul>
+                <li>
+                  <h5>
+                  Kundennumer
+                    </h5>
+                </li>
+                <li>
+                  <h5>
+                  Kundenname
+                  </h5>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-table-body">
+              <ul>
+                {Array(6)
+                  .fill("")
+                  .map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        <div className="mobile-td">
+                          <div
+                            className="mobile-data-top"
+                            onClick={() => clickOnItemOne(idx)}
+                          >
+                            <div className="mobile-datatp-inner">
+                              <p>1</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Test</p>
+                            </div>
+                          </div>
+                          {seletedOne === idx && (
+                            <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl mobile-databtm-aligncntr">
+                                <p className="para-bold">
+                                status:
+                                </p>
+                                <div class="usrdetls-td "><a href=""><div class="prd-descrp prd-descrpt"><span class="d-block titl-view"><svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3.5" cy="3.5" r="3.5" fill="#219653"></circle></svg></span><p>Aktiv</p></div><div class="drpdwn"><span><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a></div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+          </div>
+          {/* end mobile table view */}
+
+
         </div>
       </div>
     </>

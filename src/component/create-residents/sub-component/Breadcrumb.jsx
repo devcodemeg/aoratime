@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Breadcrumb  = () => {
   return (
     <>
-      <div className="home-top">
+      <div className="home-top usrmngemnt-top">
         <div className='page-title'>
             <h3>Bewohner Übersicht</h3>
         </div>

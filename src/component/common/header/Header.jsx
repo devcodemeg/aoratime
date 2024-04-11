@@ -12,6 +12,8 @@ function Header() {
     document.body.classList.remove("open-sidebar")
   }
 
+  const [lang, setLang] = useState(false)
+
   return (
     <>
       <header className="header" >
@@ -30,7 +32,7 @@ function Header() {
                 <img src={Logo2} alt="" />
               </span>
             </div>
-            
+
           </div>
           <div className="rght-hdr">
             <div className="hdrmr-main">
@@ -59,7 +61,7 @@ function Header() {
                 {showProfile && (
                   <div className="hdrmenu-drpdwn">
                     <ul>
-                      <li onClick={() => setShowProfile((p) => !p)}>
+                      <li onClick={() => setLang((p) => !p)}>
                         <Link >
                           <span>
                             <svg
@@ -83,6 +85,7 @@ function Header() {
                           </span>
                         </Link>
                       </li>
+                      {lang && <>
                       <li onClick={() => setShowProfile((p) => !p)}>
                         <Link >
                           <span>
@@ -121,6 +124,7 @@ function Header() {
                           Deutch
                         </Link>
                       </li>
+                      </>}
                       <li onClick={() => setShowProfile((p) => !p)}>
                         <Link to={"/user-management"}>
                           <span>

@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CustomersNameList = () => {
+  const [seletedTwo, setSelectedTwo] = useState(null);
+  const clickOnItemTwo = (index) => {
+    if (index === seletedTwo) {
+      setSelectedTwo(null);
+    } else {
+      setSelectedTwo(index);
+    }
+  };
   const hotelData = [
     {
       hotelName: "Hotel A",
@@ -30,10 +38,10 @@ const CustomersNameList = () => {
   ];
   return (
     <>
-       <div className="card-filtr fltr">
+       <div className="card-filtr fltr fltrmbl-flex">
           <div className="fltr-inner">
             <div className="filter-nam">
-              <p>Customers</p>
+              <input type="text" placeholder="Customers" />
             </div>
           </div>
           <div className="fltr-inner">
@@ -91,7 +99,22 @@ const CustomersNameList = () => {
               </label>
             </div>
           </div>
-
+          <div className="fltrsrch-mobl-icon">
+            <span className="moblsrch-icon">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z"
+                  fill="#808184"
+                />
+              </svg>
+            </span>
+          </div>
           {/* <div className="fltr-inner">
             <div className="monthly-fltr select-box">
               <Select
@@ -103,17 +126,17 @@ const CustomersNameList = () => {
         </div>
         <div className="card hme-crd">
         <div className="card-body">
-          <div className="responsive-table">
+          <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-150px text-start">
+                  <th className="w-400px text-start">
                   Customer No.
                     </th>
-                  <th className="w-150px text-start">
+                  <th className="w-400px text-start">
                   Kd Name
                     </th>
-                  <th className="w-150px text-start">
+                  <th className="w-125px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Status</p>
@@ -343,6 +366,80 @@ const CustomersNameList = () => {
               </tbody>
             </table>
           </div>
+
+ {/* start mobile table view */}
+ <div className="mobiltable-main">
+            <div className="mobile-table-head">
+              <ul>
+                <li>
+                  <h5>
+                  Customer No.
+                  </h5>
+                </li>
+                <li>
+                  <h5>
+                  Kd Name
+                  </h5>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-table-body">
+              <ul>
+                {Array(6)
+                  .fill("")
+                  .map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        <div className="mobile-td">
+                          <div
+                            className="mobile-data-top"
+                            onClick={() => clickOnItemTwo(idx)}
+                          >
+                            <div className="mobile-datatp-inner">
+                              <p>1</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Test</p>
+                            </div>
+                          </div>
+                          {seletedTwo === idx && (
+                            <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl mobile-databtm-aligncntr">
+                                <p className="para-bold">
+                                Status::
+                                </p>
+                                <div className="usrdetls-td ">
+                      <a href="">
+                        <div className="prd-descrp prd-descrpt">
+                          <span className="d-block titl-view">
+
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                            </svg>
+                          </span>
+                          <p>Aktiv</p>
+                        </div>
+                        <div className="drpdwn">
+                          <span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+          </div>
+          {/* end mobile table view */}
+
         </div>
       </div>
     </>

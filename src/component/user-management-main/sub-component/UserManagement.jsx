@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const UserManagement = ({ handlePopup }) => {
@@ -29,6 +29,15 @@ const UserManagement = ({ handlePopup }) => {
       status: "active",
     },
   ];
+  const [seletedOne, setSelectedOne] = useState(null);
+
+  const clickOnItemOne = (index) => {
+    if (index === seletedOne) {
+      setSelectedOne(null);
+    } else {
+      setSelectedOne(index);
+    }
+  };
   return (
     <>
       <div className="card-hdr">
@@ -89,9 +98,9 @@ const UserManagement = ({ handlePopup }) => {
           </div>
           <div className="fltrsrch-mobl-icon">
             <span className="moblsrch-icon">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z" fill="#808184"/>
-</svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z" fill="#808184" />
+              </svg>
             </span>
           </div>
           {/* <div className="fltr-inner">
@@ -106,11 +115,11 @@ const UserManagement = ({ handlePopup }) => {
       </div>
       <div className="card hme-crd">
         <div className="card-body">
-          <div className="responsive-table">
+          <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
-                  <th className="w-50px text-center">
+                  <th className="w-175px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>PNR</p>
@@ -125,7 +134,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-250px text-center">
+                  <th className="w-300px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Benutzer</p>
@@ -140,7 +149,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-250px text-center  ">
+                  <th className="w-300px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>E-Mail</p>
@@ -155,7 +164,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-200px text-center">
+                  <th className="w-300px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Letzer Login</p>
@@ -170,7 +179,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-125px text-center">
+                  <th className="w-250px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Berechtigung</p>
@@ -185,7 +194,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-150px text-center">
+                  <th className="w-300px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Erstellst von</p>
@@ -200,7 +209,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-200px text-center">
+                  <th className="w-300px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Erstellt am</p>
@@ -215,7 +224,7 @@ const UserManagement = ({ handlePopup }) => {
                       </div>
                     </div>
                   </th>
-                  <th className="w-200px text-start">
+                  <th className="w-150px text-start">
                     <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Aktiv</p>
@@ -234,338 +243,9 @@ const UserManagement = ({ handlePopup }) => {
               </thead>
               <tbody className="">
                 <tr className="clr">
-                  <td className="text-center">1</td>
+                  <td className="text-start">1</td>
                   <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">2</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">3</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">4</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">5</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">6</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">7</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
-                    <div className="usrdtls-td">
-                      <div className="prd-descrp">
-                      <span className="d-block titl-view">goebel.alexander@gmx.de</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="text-start">04.10.2021 - 19:02</td>
-                  <td className="text-center">
-                    <div className="dumydata-flx dumydata-flx-cntr">
-                      <p>user</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>SuperAdmin</p>
-                    </div>
-                  </td>
-                  <td className="text-center">
-                    <div className="dumydata-flx">
-                      <p>01.05.2021 - 16:00</p>
-                    </div>
-                  </td>
-                  <td className="text-right">
-                    <div className="action-main">
-                      <div className="action-inner">
-                        <Link to="">
-                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
-                          </svg>
-                        </Link>
-                      </div>
-                      <div className="action-inner">
-                        <div class="action-btn">
-                          <Link to="" className="edit-action">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-center">8</td>
-                  <td className="text-start">Alexander Goebel</td>
-                  <td className="text-center">
+                  <td className="text-start">
                     <div className="usrdtls-td">
                       <div className="prd-descrp">
                         <span className="d-block titl-view">goebel.alexander@gmx.de</span>
@@ -578,17 +258,346 @@ const UserManagement = ({ handlePopup }) => {
                       <p>user</p>
                     </div>
                   </td>
-                  <td className="text-center">
+                  <td className="text-start">
                     <div className="dumydata-flx">
                       <p>SuperAdmin</p>
                     </div>
                   </td>
-                  <td className="text-center">
+                  <td className="text-start">
                     <div className="dumydata-flx">
                       <p>01.05.2021 - 16:00</p>
                     </div>
                   </td>
-                  <td className="text-right">
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">2</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">3</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">4</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">5</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">6</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">7</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="action-main">
+                      <div className="action-inner">
+                        <Link to="">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z" fill="#219653" />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="action-inner">
+                        <div class="action-btn">
+                          <Link to="" className="edit-action">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3165 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3165 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L5.625 15.375L1.5 16.5L2.625 12.375L12.75 2.24998Z" stroke="#0388A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr className="clr">
+                  <td className="text-start">8</td>
+                  <td className="text-start">Alexander Goebel</td>
+                  <td className="text-start">
+                    <div className="usrdtls-td">
+                      <div className="prd-descrp">
+                        <span className="d-block titl-view">goebel.alexander@gmx.de</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-start">04.10.2021 - 19:02</td>
+                  <td className="text-center">
+                    <div className="dumydata-flx dumydata-flx-cntr">
+                      <p>user</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>SuperAdmin</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
+                    <div className="dumydata-flx">
+                      <p>01.05.2021 - 16:00</p>
+                    </div>
+                  </td>
+                  <td className="text-start">
                     <div className="action-main">
                       <div className="action-inner">
                         <Link to="">
@@ -612,6 +621,135 @@ const UserManagement = ({ handlePopup }) => {
               </tbody>
             </table>
           </div>
+
+
+
+          {/* start mobile table view */}
+          <div className="mobiltable-main">
+            <div className="mobile-table-head">
+              <ul>
+                <li>
+                  <h5>
+                    PNR
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
+                <li>
+                  <h5>
+                    User
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-table-body">
+              <ul>
+                {Array(6)
+                  .fill("")
+                  .map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        <div className="mobile-td">
+                          <div
+                            className="mobile-data-top"
+                            onClick={() => clickOnItemOne(idx)}
+                          >
+                            <div className="mobile-datatp-inner">
+                              <p>1</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Alexander Goebel</p>
+                            </div>
+                          </div>
+                          {seletedOne === idx && (
+                            <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">
+                                  Email:
+                                </p>
+                                <p>goebel.alexander@gmx.de</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">Ausgecheckt:</p>
+                                <p>04.10.2021 - 19:02</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">Authorizaion:</p>
+                                <p>user</p>
+                              </div>
+                              <div className="mobile-databtm-dtl">
+                                <p className="para-bold">Created by:</p>
+                                <p>
+                                  SuperAdmin</p>
+                              </div>
+
+                              <div className="mobile-databtm-btn">
+                                <button className="btn primary-btn">
+                                  Button
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+          </div>
+          {/* end mobile table view */}
+
+
+
+
+
+
         </div>
       </div>
     </>

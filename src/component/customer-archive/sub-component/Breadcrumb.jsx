@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Breadcrumb  = () => {
+  const [showDropdown , setShowDropdown] = useState(false)
+
   return (
     <>
-      <div className="home-top">
+      <div className="home-top usrmngemnt-top">
         <div className='page-title'>
           <h3>Customer achieve</h3>
         </div>
@@ -20,7 +22,7 @@ const Breadcrumb  = () => {
           <div
             className="btns-evnts-inner"
           >
-            <Link to="" className="btn ahcv-btn btn-flex rtrn-achv">
+            <Link  onClick={()=> setShowDropdown(p => !p)} className="btn ahcv-btn btn-flex rtrn-achv">
 
               Achieve
               <span className="svg-icon">
@@ -29,7 +31,8 @@ const Breadcrumb  = () => {
                 </svg>
               </span>
             </Link>
-            <div className="ahcv-btn-drpdwn">
+
+            { showDropdown && <div className="ahcv-btn-drpdwn">
               <ul>
                 <li>
                   <Link to="/customer-archive" className='cstmr'>
@@ -54,12 +57,12 @@ const Breadcrumb  = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div>}
+
           </div>
         </div>
       </div>
     </>
   );
 };
-
 export default Breadcrumb;

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const UserAddRole = () => {
     return (
         <>
-            <div className="card add-role-crd hme-crd">
+            <div className="card add-role-crd hme-crd usercard-flex">
                 <div className="card-body">
                     <div className="add-main">
                         <div className='page-title'>
@@ -25,7 +25,7 @@ const UserAddRole = () => {
                             </div>
                         </div>
                         <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner anlegen</span></label>
+                            <label><input type="checkbox" name="" /><span><em></em>Administrator</span></label>
                         </div>
                     </div>
                     <div className="brdr">
@@ -36,79 +36,79 @@ const UserAddRole = () => {
                             <h3>Berechtigungen</h3>
                         </div>
                         <div className="main-slctr">
-                        <div className="inner-flx-box">
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner anlegen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner ändern</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner archivieren </span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner löschen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner anlegen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner ändern</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner archivieren </span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Bewohner löschen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Kunde anlegen</span></label>
-                        </div>
-                        </div>
-                        <div className="inner-flx-box">
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Kunde öndern</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Kunde archivieren</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Kunde löschen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Objekt anlegen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Objekt ändern</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Objekt archivieren</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Objekt löschen</span></label>
-                        </div>
-                        <div className="chkbx-main">
-                        <label><input type="checkbox" name=""/><span><em></em>Report erstellen</span></label>
-                        </div>
-                        </div>
+                            <div className="inner-flx-box">
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner anlegen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner ändern</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner archivieren </span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner löschen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner anlegen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner ändern</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner archivieren </span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Bewohner löschen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Kunde anlegen</span></label>
+                                </div>
+                            </div>
+                            <div className="inner-flx-box">
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Kunde öndern</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Kunde archivieren</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Kunde löschen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Objekt anlegen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Objekt ändern</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Objekt archivieren</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Objekt löschen</span></label>
+                                </div>
+                                <div className="chkbx-main">
+                                    <label><input type="checkbox" name="" /><span><em></em>Report erstellen</span></label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="btns-evnts btn-evnt">
-          <div className="btns-evnts-inner">
-            <Link to="/roll"
-              className="btn ahcv-btn abb-btn"
-            >
-             Abbrechen
-            </Link>
-          </div>
-          <div
-            className="btns-evnts-inner"
-          >
-            <Link to="/roll" className="btn primary-btn btn-2 spe-btn">
-            Speichern
-            </Link>
-          </div>
-        </div>
+                        <div className="btns-evnts-inner">
+                            <Link to="/roll"
+                                className="btn ahcv-btn abb-btn"
+                            >
+                                Abbrechen
+                            </Link>
+                        </div>
+                        <div
+                            className="btns-evnts-inner"
+                        >
+                            <Link to="/roll" className="btn primary-btn btn-2 spe-btn">
+                                Speichern
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

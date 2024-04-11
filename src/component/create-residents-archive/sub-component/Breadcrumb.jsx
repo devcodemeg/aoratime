@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Breadcrumb = () => {
   return (
     <>
-       <div className="home-top">
+       <div className="home-top usrmngemnt-top">
         <div className='page-title'>
           <h3>Bewohner Archiv</h3>
         </div>
@@ -20,14 +20,14 @@ const Breadcrumb = () => {
             className="btns-evnts-inner"
           >
             <Link to="/create-residents-archive" className="btn secondary-btn btn-2 ">
-              Bewohner archivieren
+              Bewohner aktiveren
             </Link>
           </div>
           <div
             className="btns-evnts-inner"
           >
             <Link to="" className="btn ahcv-btn ">
-              Archiv Ansicht
+            Bewohner Ansicht
             </Link>
           </div>
           <div

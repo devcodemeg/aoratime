@@ -30,7 +30,7 @@ function User() {
       <div className="main-wrapper">
         <div className="card usr-crd">
           <Breadcrumb />
-          <div className="main-card">
+          <div className="main-card user-page usercard-flex">
             <div className="inner-flex-x40">
               <UserManagementData />
             </div>

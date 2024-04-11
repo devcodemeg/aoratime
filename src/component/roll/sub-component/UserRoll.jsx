@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const UserRoll = () => {
+  const [seletedTwo, setSelectedTwo] = useState(null);
+  const [activeRowIndex, setActiveRowIndex] = useState(null)
 
+  const clickOnRow = (index) => {
+    if (index === activeRowIndex) {
+
+      setActiveRowIndex(null)
+    } else {
+
+      setActiveRowIndex(index)
+    }
+  }
+
+  const clickOnItemTwo = (index) => {
+    if (index === seletedTwo) {
+      setSelectedTwo(null);
+    } else {
+      setSelectedTwo(index);
+    }
+  };
   return (
     <>
       <div className="card-hdr">
@@ -62,24 +81,32 @@ const UserRoll = () => {
             </div>
           </div>
 
-          {/* <div className="fltr-inner">
-            <div className="monthly-fltr select-box">
-              <Select
-                options={optionsMonthlyType}
-                placeholder={<div>Status</div>}
-              />
-            </div>
-          </div> */}
+          <div className="fltrsrch-mobl-icon">
+            <span className="moblsrch-icon">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8289 13.0043L9.84772 9.023C10.6189 8.07043 11.0832 6.86 11.0832 5.54168C11.0832 2.48618 8.59705 0 5.54159 0C2.48612 0 0 2.48615 0 5.54165C0 8.59715 2.48615 11.0833 5.54162 11.0833C6.85992 11.0833 8.07034 10.619 9.0229 9.84783L13.0041 13.8291C13.1179 13.9428 13.2672 14 13.4165 14C13.5659 14 13.7152 13.9428 13.8289 13.8291C14.057 13.601 14.057 13.2323 13.8289 13.0043ZM5.54162 9.91665C3.12897 9.91665 1.16666 7.95432 1.16666 5.54165C1.16666 3.12897 3.12897 1.16665 5.54162 1.16665C7.95426 1.16665 9.91657 3.12897 9.91657 5.54165C9.91657 7.95432 7.95424 9.91665 5.54162 9.91665Z"
+                  fill="#808184"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
       <div className="card hme-crd">
         <div className="card-body">
-          <div className="responsive-table">
+          <div className="responsive-table big-screen-table">
             <table className="table table-row-dashed">
               <thead className="dashboard-thead">
                 <tr>
                   <th className="w-250px text-start">
-                     <div className="main-th-hdng">
+                    <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Title</p>
                       </div>
@@ -92,9 +119,9 @@ const UserRoll = () => {
                         </span>
                       </div>
                     </div>
-                    </th>
+                  </th>
                   <th className="w-200px text-start">
-                     <div className="main-th-hdng">
+                    <div className="main-th-hdng">
                       <div className="main-inner-hdng">
                         <p>Abkürzung</p>
                       </div>
@@ -107,9 +134,9 @@ const UserRoll = () => {
                         </span>
                       </div>
                     </div>
-                    </th>
+                  </th>
                   <th className="w-200px text-center">
-                     <div className="main-th-hdng main-th-new ">
+                    <div className="main-th-hdng main-th-new ">
                       <div className="main-inner-hdng">
                         <p>Status</p>
                       </div>
@@ -122,287 +149,262 @@ const UserRoll = () => {
                         </span>
                       </div>
                     </div>
-                    </th>
+                  </th>
                 </tr>
               </thead>
               <tbody className="">
-                <tr className="clr">
-                  <td className="text-start">Administrator</td>
-                  <td className="text-start">Administrator</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                      <div className="usrdetls-td-star">
-                        <span>
-                          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#F2994A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </span>
-                      </div>
-                      <div className="usrdetls-td-drpdwn">
-                        <ul>
-                          <li>
-                            <Link to={"/add-role"} className='usr-edt'>
-                              <span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g clip-path="url(#clip0_1_7505)">
-                                    <path d="M9.16602 3.33325H3.33268C2.89065 3.33325 2.46673 3.50885 2.15417 3.82141C1.84161 4.13397 1.66602 4.55789 1.66602 4.99992V16.6666C1.66602 17.1086 1.84161 17.5325 2.15417 17.8451C2.46673 18.1577 2.89065 18.3333 3.33268 18.3333H14.9993C15.4414 18.3333 15.8653 18.1577 16.1779 17.8451C16.4904 17.5325 16.666 17.1086 16.666 16.6666V10.8333" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M15.416 2.0832C15.7475 1.75168 16.1972 1.56543 16.666 1.56543C17.1349 1.56543 17.5845 1.75168 17.916 2.0832C18.2475 2.41472 18.4338 2.86436 18.4338 3.3332C18.4338 3.80204 18.2475 4.25168 17.916 4.5832L9.99935 12.4999L6.66602 13.3332L7.49935 9.99986L15.416 2.0832Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_1_7505">
-                                      <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </span>
-                              Editieren
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to={"/add-role"} className='usr-sdtrt ' active>
-                              <span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                              </span>
-                              Standard
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to={"/add-role"} className='usr-actv' >
-                              <span>
+                {Array(5).fill("").map((item, idx) => {
+                  return (
+                    <tr className="clr" key={idx}>
+                      <td className="text-start">Administrator</td>
+                      <td className="text-start">Administrator</td>
+                      <td className="text-ends">
+                        <div className="actiontab-main">
+                          <div className="actiondrpdwn-main">
+                            <div className="actiondrpdwn-btn" onClick={() => clickOnRow(idx)}>
+                              <em className="crcl-dot">
                                 <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                                  <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
+                                </svg>
+                              </em>
+                              <p>Inaktiv</p>
+                              <span className='drpdwn-arrow'>
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                               </span>
-                              Aktiv
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Head of Department</td>
-                  <td className="text-start">BL</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
+                            </div>
+
+                            {activeRowIndex === idx && <div className="actiondrpdwn-list">
+                              <ul>
+                                <li>
+                                  <Link  className=''>
+                                    <span>
+                                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_7505)">
+                                          <path d="M9.16602 3.33325H3.33268C2.89065 3.33325 2.46673 3.50885 2.15417 3.82141C1.84161 4.13397 1.66602 4.55789 1.66602 4.99992V16.6666C1.66602 17.1086 1.84161 17.5325 2.15417 17.8451C2.46673 18.1577 2.89065 18.3333 3.33268 18.3333H14.9993C15.4414 18.3333 15.8653 18.1577 16.1779 17.8451C16.4904 17.5325 16.666 17.1086 16.666 16.6666V10.8333" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M15.416 2.0832C15.7475 1.75168 16.1972 1.56543 16.666 1.56543C17.1349 1.56543 17.5845 1.75168 17.916 2.0832C18.2475 2.41472 18.4338 2.86436 18.4338 3.3332C18.4338 3.80204 18.2475 4.25168 17.916 4.5832L9.99935 12.4999L6.66602 13.3332L7.49935 9.99986L15.416 2.0832Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_1_7505">
+                                            <rect width="20" height="20" fill="white" />
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    </span>
+                                    Editieren
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link  className=''>
+                                    <span>
+                                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                    </span>
+                                    Standard
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link  className=''>
+                                    <span>
+                                      <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                                      </svg>
+
+                                    </span>
+                                    Aktiv
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>}
+                          </div>
+                          <div className="action-prformed-icons">
+                            <span>
+                              <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#F2994A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </span>
+                          </div>
                         </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">User</td>
-                  <td className="text-start">B.N</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Object leader</td>
-                  <td className="text-start">OIL</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Administrator</td>
-                  <td className="text-start">Administrator</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Administrator</td>
-                  <td className="text-start">Administrator</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Administrator</td>
-                  <td className="text-start">Administrator</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Administrator</td>
-                  <td className="text-start">Administrator</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="clr">
-                  <td className="text-start">Administrator</td>
-                  <td className="text-start">Administrator</td>
-                  <td className="text-ends">
-                    <div className="usrdetls-td ">
-                      <a href="">
-                        <div className="prd-descrp prd-descrpts">
-                          <span className="d-block titl-view">
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
-                            </svg>
-                          </span>
-                          <p>Inaktiv</p>
-                        </div>
-                        <div className="drpdwn">
-                          <span>
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </td>
-                </tr>
+                      </td>
+                    </tr>
+                  )
+                })
+
+
+                }
               </tbody>
             </table>
           </div>
+          {/* start mobile table view */}
+          <div className="mobiltable-main">
+            <div className="mobile-table-head">
+              <ul>
+                <li>
+                  <h5>
+                    Title
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
+                <li>
+                  <h5>
+                    Abbreviation
+                    <span>
+                      <svg
+                        width="8"
+                        height="12"
+                        viewBox="0 0 8 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 4L4 1L1 4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M1 8L4 11L7 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </h5>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-table-body">
+              <ul>
+                {Array(6)
+                  .fill("")
+                  .map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        <div className="mobile-td">
+                          <div
+                            className="mobile-data-top"
+                            onClick={() => clickOnItemTwo(idx)}
+                          >
+                            <div className="mobile-datatp-inner">
+                              <p>Administrator</p>
+                            </div>
+                            <div className="mobile-datatp-inner">
+                              <p>Alexander Goebel</p>
+                            </div>
+                          </div>
+                          {seletedTwo === idx && (
+                            <div className="mobile-data-btm">
+                              <div className="mobile-databtm-dtl mobile-databtm-aligncntr">
+                                <p className="para-bold">
+                                  Status:
+                                </p>
+                                <div className="actiontab-main">
+                                  <div className="actiondrpdwn-main">
+                                    <div className="actiondrpdwn-btn" onClick={() => clickOnRow(idx)}>
+                                      <em className="crcl-dot">
+                                        <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <circle cx="3.5" cy="3.5" r="3.5" fill="#808080" />
+                                        </svg>
+                                      </em>
+                                      <p>Inaktiv</p>
+                                      <span className='drpdwn-arrow'>
+                                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1 1L5 5L9 1" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                      </span>
+                                    </div>
+
+                                    {activeRowIndex === idx && <div className="actiondrpdwn-list">
+                                      <ul>
+                                        <li>
+                                          <Link to={"/add-role"} className=''>
+                                            <span>
+                                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1_7505)">
+                                                  <path d="M9.16602 3.33325H3.33268C2.89065 3.33325 2.46673 3.50885 2.15417 3.82141C1.84161 4.13397 1.66602 4.55789 1.66602 4.99992V16.6666C1.66602 17.1086 1.84161 17.5325 2.15417 17.8451C2.46673 18.1577 2.89065 18.3333 3.33268 18.3333H14.9993C15.4414 18.3333 15.8653 18.1577 16.1779 17.8451C16.4904 17.5325 16.666 17.1086 16.666 16.6666V10.8333" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M15.416 2.0832C15.7475 1.75168 16.1972 1.56543 16.666 1.56543C17.1349 1.56543 17.5845 1.75168 17.916 2.0832C18.2475 2.41472 18.4338 2.86436 18.4338 3.3332C18.4338 3.80204 18.2475 4.25168 17.916 4.5832L9.99935 12.4999L6.66602 13.3332L7.49935 9.99986L15.416 2.0832Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_1_7505">
+                                                    <rect width="20" height="20" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </span>
+                                            Editieren
+                                          </Link>
+                                        </li>
+                                        <li>
+                                          <Link to={"/add-role"} className=''>
+                                            <span>
+                                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                              </svg>
+                                            </span>
+                                            Standard
+                                          </Link>
+                                        </li>
+                                        <li>
+                                          <Link to={"/add-role"} className=''>
+                                            <span>
+                                              <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="3.5" cy="3.5" r="3.5" fill="#219653" />
+                                              </svg>
+
+                                            </span>
+                                            Aktiv
+                                          </Link>
+                                        </li>
+                                      </ul>
+                                    </div>}
+                                  </div>
+                                  <div className="action-prformed-icons">
+                                    <span>
+                                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.99935 1.66675L12.5743 6.88341L18.3327 7.72508L14.166 11.7834L15.1493 17.5167L9.99935 14.8084L4.84935 17.5167L5.83268 11.7834L1.66602 7.72508L7.42435 6.88341L9.99935 1.66675Z" stroke="#F2994A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+          </div>
+          {/* end mobile table view */}
         </div>
       </div>
     </>
